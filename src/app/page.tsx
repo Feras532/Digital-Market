@@ -39,7 +39,7 @@ export default function Home() {
             welcome to our digital market where u can bla bla bla bla bla blabla
             bla blabla bla bla bla bla blabla bla blabla bla blabla bla blabla
             bla bla bla bla blabla bla blabla bla blabla bla blabla bla blabla
-            bla blabla bla bla
+            bla blabla bla annnnnnd bla....
           </p>
           <div className="flex flex-col sm:flex-row gap-4 mt-6">
             <Link href="/products" className={buttonVariants()}>
