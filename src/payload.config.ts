@@ -1,4 +1,4 @@
-import { mongooseAdapter } from "@payloadcms/db-mongodb";
+import { mongooseAdapter } from '@payloadcms/db-mongodb'
 import { slateEditor } from "@payloadcms/richtext-slate";
 import { buildConfig } from "payload/config";
 import { webpackBundler } from "@payloadcms/bundler-webpack";
@@ -7,6 +7,7 @@ import path from "path";
 export default buildConfig({
     serverURL: process.env.NEXT_PUBLIC_SERVER_URL || '',
     collections: [],
+    // Customizing the admin route to be '/sell' instead of the default.
     routes: {
         admin: '/sell'
     },
@@ -25,6 +26,7 @@ export default buildConfig({
     db: mongooseAdapter({
         url: process.env.MONGODB_URL!,
     }),
+    // Enabling TypeScript support and specifying the output file for type definitions.
     typescript: {
         outputFile: path.resolve(__dirname, "payload-types.ts")
     }
