@@ -4,6 +4,7 @@ import NavItems from './NavItems'
 import { Icons } from './Icons'
 import Cart from './Cart'
 import { buttonVariants } from './ui/button'
+import Image from "next/image"
 
 const Navbar = () => {
 
@@ -19,7 +20,13 @@ const Navbar = () => {
 
                             <div className='ml-4 flex lg:ml-0'>
                                 <Link href='/'>
-                                    <Icons.logo className='h-10 w-10' />
+                                    {/* <Icons.logo className='h-10 w-10' /> */}
+                                    <Image
+                                        src='/main-icon.png'
+                                        width={50}
+                                        height={50}
+                                        alt='icon'
+                                    />
                                 </Link>
                             </div>
 

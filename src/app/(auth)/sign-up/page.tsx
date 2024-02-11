@@ -10,6 +10,7 @@ import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { AuthCredentialsValidator, TAuthCredentialsValidator } from "@/lib/validators/account-credentials-validator"
 import { trpc } from "@/trpc/client"
+import Image from 'next/image'
 const page = () => {
 
 
@@ -34,7 +35,13 @@ const page = () => {
                 {/* for small devices we will have fixed width of 350px */}
                 <div className="mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[350px]">
                     <div className="flex flex-col items-center space-y-2 text-center">
-                        <Icons.logo className='h-20 w-20' />
+                        {/* <Icons.logo className='h-20 w-20' /> */}
+                        <Image
+                            src='/main-icon.png'
+                            alt='empty cart'
+                            width={100}
+                            height={100}
+                        />
                         <h1 className="text-3xl font-bold">
                             Create an account now
                         </h1>
